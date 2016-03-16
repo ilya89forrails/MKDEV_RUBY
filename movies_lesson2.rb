@@ -7,7 +7,7 @@ filename = gets.chomp
 
 
 #проверка на наличие файла в папке
-if File.exist?(filename)==false   
+unless File.exist?(filename)
   abort "File not found: #{filename}"
 end	
 
