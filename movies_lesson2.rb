@@ -4,39 +4,26 @@
 
 print "Hello! Please enter file name: "
 filename = gets.chomp
-if File.exist?(filename) then  #проверка на наличие файла в папке
-	
+
+
+#проверка на наличие файла в папке
+if File.exist?(filename)==false   
+  abort "File not found: #{filename}"
+end	
+
 
 #Сама программа
 
-	lines = File.readlines(filename)
+lines = File.readlines(filename)
 
-	lines.each do |line|
-	columns = line.split("|")
-	movie = {"title" => columns[1], "rating" => columns[7]}  #беру только название фильма и рейтинг
-	
-	movie["rating"] = "*" * movie["rating"][-1].to_i  #заменяем на звездочки
+lines.each do |line|
+  columns = line.split("|")
+  movie = {title: columns[1], rating: columns[7]}  #беру только название фильма и рейтинг
 
-		if movie["title"].include?("Time") then #выводим только фильмы со словом Time в тайтле
-  			puts movie["title"] + " " + movie["rating"]
-		end
+  movie[:rating] = "*" * movie[:rating][-1].to_i  #заменяем на звездочки
 
-	end
+  if movie[:title].include?("Time") then #выводим только фильмы со словом Time в тайтле
+    puts movie[:title] + " " + movie[:rating]
+  end
 
-
-else
-	puts "File not found: #{filename}"
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
