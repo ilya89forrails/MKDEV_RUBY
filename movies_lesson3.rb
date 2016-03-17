@@ -3,50 +3,36 @@
 
 def five_longest_movies (movies)  #5 самых длинных фильмов;  
 
-  sorted_movies = movies.sort_by{ |movie| movie[:length].to_i }.reverse!.first(5)
-
-
   puts "5 самых длинных фильмов:"
-  sorted_movies.each do |movie|
-    puts movie[:title] + " " + movie[:length]
-  end
+  puts movies.sort_by{|movie| movie[:length].to_i}.reverse.first(5).collect{|movie| movie[:title] + " " + movie[:length]} 
+
 end
 
 
 
 def comedies (movies)  # все комедии, отсортированные по дате выхода   
-  
-  sorted_movies = movies.sort_by{ |movie| movie[:release_date] }.select!{|movie| movie[:genre].include?("Comedy")}
-  
 
   puts
   puts "Все комедии, отсортированные по дате выхода:"
-  sorted_movies.each do |movie|
-    puts movie[:title] + " " + movie[:release_date]
-  end
+  puts movies.sort_by{|movie| movie[:release_date]}.select{|movie| movie[:genre].include?("Comedy")}.collect{|movie| movie[:title] + " " + movie[:release_date]} 
+   
 end
 
 
 def editors (movies) #список всех режиссёров по алфавиту (без повторов!) 
   
-  sorted_movies = movies.sort_by{ |movie| movie[:editor] }.uniq!{|movie| movie[:editor] } 
- 
-  
   puts
   puts "Список всех режиссёров по алфавиту:"
-  sorted_movies.each do |movie|
-    puts movie[:editor]
-  end
+  puts movies.sort_by{|movie| movie[:editor]}.uniq{|movie| movie[:editor]}.collect{|movie| movie[:editor]} 
+   
 end
 
 
 def not_US (movies) #количество фильмов, снятых не в США. 
   
-  num = movies.count{|movie| movie[:country]!="USA"} 
-
-
   puts
-  puts "Количество фильмов, снятых не в США " + num.to_s
+  puts "Количество фильмов, снятых не в США " + movies.count{|movie| movie[:country]!="USA"}.to_s
+  
 end
 
 
