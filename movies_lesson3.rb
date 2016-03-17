@@ -112,17 +112,17 @@ while true
 
   case choose
     when 1
-        five_longest_movies (movies)
+      five_longest_movies (movies)
     when 2
-        comedies (movies)
+      comedies (movies)
     when 3
-        editors(movies)
+      editors(movies)
     when 4
-        not_US(movies)
+      not_US(movies)
     when 5
-        editors_gr (movies)
+      editors_gr (movies)
     when 6
-        actors_rd (movies)
+      actors_rd (movies)
     else
       abort "Thanks for using!"
   end
