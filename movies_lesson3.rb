@@ -1,10 +1,13 @@
+
 #Методы из заданий
 
 
 def five_longest_movies (movies)  #5 самых длинных фильмов;  
 
   puts "5 самых длинных фильмов:"
-  puts movies.sort_by{|movie| movie[:length].to_i}.reverse.first(5).collect{|movie| movie[:title] + " " + movie[:length]} 
+  puts movies.
+    sort_by{|movie| movie[:length].to_i}.reverse.first(5).
+    collect{|movie| movie[:title] + " " + movie[:length]} 
 
 end
 
@@ -14,7 +17,10 @@ def comedies (movies)  # все комедии, отсортированные �
 
   puts
   puts "Все комедии, отсортированные по дате выхода:"
-  puts movies.sort_by{|movie| movie[:release_date]}.select{|movie| movie[:genre].include?("Comedy")}.collect{|movie| movie[:title] + " " + movie[:release_date]} 
+  puts movies.
+    sort_by{|movie| movie[:release_date]}.
+    select{|movie| movie[:genre].include?("Comedy")}.
+    collect{|movie| movie[:title] + " " + movie[:release_date]} 
    
 end
 
@@ -23,7 +29,9 @@ def editors (movies) #список всех режиссёров по алфав
   
   puts
   puts "Список всех режиссёров по алфавиту:"
-  puts movies.sort_by{|movie| movie[:editor]}.uniq{|movie| movie[:editor]}.collect{|movie| movie[:editor]} 
+  puts movies.collect{|movie| movie[:editor]}.sort.uniq
+    
+    
    
 end
 
@@ -31,11 +39,43 @@ end
 def not_US (movies) #количество фильмов, снятых не в США. 
   
   puts
-  puts "Количество фильмов, снятых не в США " + movies.count{|movie| movie[:country]!="USA"}.to_s
-  
+  puts "Количество фильмов, снятых не в США " +
+    movies.count{|movie| movie[:country]!="USA"}.to_s
 end
 
 
+
+def editors_gr (movies) #Вывести количество фильмов, сгруппированных по режиссёру, использовать метод group by
+
+  puts
+  puts movies.group_by {|movie| movie[:editor]}.sort
+
+ 
+
+end
+
+
+def actors_rd (movies) #Вывести количество фильмов, в котором снялся каждый актёр, использовать метод reduce
+
+    actors=[]
+
+    movies.each do |movie|
+    cast = movie[:actors].split(",")
+        cast.each do |actor|
+            actors.push actor
+        end
+    end
+
+    actors.sort!.uniq!
+    
+    puts
+    actors.each do |actor|
+    puts actor
+    end
+
+
+
+end
 
 
 # сама программа
@@ -68,3 +108,5 @@ five_longest_movies (movies)
 comedies (movies)
 editors (movies)
 not_US (movies)
+editors_gr(movies)
+actors_rd(movies)
