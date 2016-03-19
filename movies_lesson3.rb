@@ -59,7 +59,7 @@ def actors_rd (movies) #Вывести количество фильмов, в �
 
   puts
 
-  puts  movies.collect{|movie| movie[:actors].split(",")}.
+  puts  movies.collect{|movie| movie[:actors].chomp.split(",")}.
     flatten.group_by{|i| i }.
     collect{|actor, his_movies| [actor, his_movies.count]}.sort
     
