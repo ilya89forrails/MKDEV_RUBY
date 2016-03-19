@@ -49,43 +49,21 @@ def editors_gr (movies) #Вывести количество фильмов, с�
 
   puts
   
-
-  num_of_movies = movies.group_by {|movie| movie[:editor]}.values.collect{|movie|movie.count}
-
-  editors =  movies.collect{|movie| movie[:editor]}.uniq
-
-  result = editors.zip(num_of_movies).to_h
-
-  puts result.sort.collect{|editor,count| editor + " " + count.to_s}
-
+  puts  movies.group_by{|m| m[:editor]}. 
+    collect{|e, group| [e, group.count]}.to_h.sort 
 
 end
 
 
 def actors_rd (movies) #Вывести количество фильмов, в котором снялся каждый актёр, использовать метод reduce
 
-    actors=[]
+  puts
 
-    movies.each do |movie|
-    cast = movie[:actors].split(",")
-        cast.each do |actor|
-            actors.push actor
-        end
-    end
-
-    actors.sort!.uniq!
+  puts  movies.collect{|movie| movie[:actors].split(",")}.
+    flatten.group_by{|i| i }.
+    collect{|actor, his_movies| [actor, his_movies.count]}.sort
     
-    #puts movies.reduce(Hash.new(0)) { |subhash| subhash.each { |prod, value| result[:] += 1 } }
-
-  #count = movies.group_by { |movie| movie[:editor]}.reduce({}) do |tmphash, (k,v)|
-   # tmphash[k] = v.size
-  #  tmphash
-  #end
     
-#( Hash.new(0) ){ |hash,element|
-    #  hash[ element ] +=1
-    #  hash
-   # }
 
 end
 
@@ -120,5 +98,6 @@ end
 #comedies (movies)
 #editors (movies)
 #not_US (movies)
-editors_gr(movies)
+#editors_gr(movies)
 actors_rd(movies)
+
