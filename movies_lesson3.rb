@@ -48,9 +48,16 @@ end
 def editors_gr (movies) #Вывести количество фильмов, сгруппированных по режиссёру, использовать метод group by
 
   puts
-  puts movies.group_by {|movie| movie[:editor]}.sort
+  
 
- 
+  num_of_movies = movies.group_by {|movie| movie[:editor]}.values.collect{|movie|movie.count}
+
+  editors =  movies.collect{|movie| movie[:editor]}.uniq
+
+  result = editors.zip(num_of_movies).to_h
+
+  puts result.sort.collect{|editor,count| editor + " " + count.to_s}
+
 
 end
 
@@ -68,12 +75,17 @@ def actors_rd (movies) #Вывести количество фильмов, в �
 
     actors.sort!.uniq!
     
-    puts
-    actors.each do |actor|
-    puts actor
-    end
+    #puts movies.reduce(Hash.new(0)) { |subhash| subhash.each { |prod, value| result[:] += 1 } }
 
-
+  #count = movies.group_by { |movie| movie[:editor]}.reduce({}) do |tmphash, (k,v)|
+   # tmphash[k] = v.size
+  #  tmphash
+  #end
+    
+#( Hash.new(0) ){ |hash,element|
+    #  hash[ element ] +=1
+    #  hash
+   # }
 
 end
 
@@ -104,9 +116,9 @@ lines.each do |line|
 end
 
 
-five_longest_movies (movies)
-comedies (movies)
-editors (movies)
-not_US (movies)
+#five_longest_movies (movies)
+#comedies (movies)
+#editors (movies)
+#not_US (movies)
 editors_gr(movies)
 actors_rd(movies)
