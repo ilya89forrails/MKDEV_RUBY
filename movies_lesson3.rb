@@ -59,11 +59,25 @@ def actors_rd (movies) #Вывести количество фильмов, в �
 
   puts
 
-  puts  movies.collect{|movie| movie[:actors].chomp.split(",")}.
-    flatten.group_by{|i| i }.
-    collect{|actor, his_movies| [actor, his_movies.count]}.sort
+  #puts  movies.collect{|movie| movie[:actors].chomp.split(",")}.
+    #flatten.group_by{|i| i }.
+    #collect{|actor, his_movies| [actor, his_movies.count]}.sort
     
+  
+
+  actors  = movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.keys.uniq
+
+  actors2 = movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.collect{|actor, his_movies| [ his_movies.count]}
+
+  puts actors.size 
+  puts actors2.size
+
+  result = actors.zip(actors2)
+
+  puts result.sort
     
+  
+
 
 end
 
@@ -99,5 +113,8 @@ end
 #editors (movies)
 #not_US (movies)
 #editors_gr(movies)
+
+
+
 actors_rd(movies)
 
