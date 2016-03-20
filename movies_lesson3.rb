@@ -59,21 +59,14 @@ def actors_rd (movies) #Вывести количество фильмов, в �
 
   puts
 
-  #puts  movies.collect{|movie| movie[:actors].chomp.split(",")}.
-    #flatten.group_by{|i| i }.
-    #collect{|actor, his_movies| [actor, his_movies.count]}.sort
+  puts  movies.collect{|movie| movie[:actors].chomp.split(",")}.
+    flatten.group_by{|i| i }.
+    collect{|actor, his_movies| [actor, his_movies.count]}.sort
     
   
 
-  actors  = movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.keys.uniq.
-    zip(movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.collect{|actor, his_movies| [ his_movies.count]}).to_h
-
-  puts actors.size 
- 
-
-  puts actors.sort
-    
-  
+  #actors  = movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.keys.uniq.
+  #  zip(movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.collect{|actor, his_movies| [ his_movies.count]}).to_h
 
 
 end
@@ -88,19 +81,10 @@ filename = "movies.txt"
 lines = File.readlines(filename)
 movies = []
 
+MOVIE_KEYS = [:link, :title, :year, :country, :release_date, :genre, :length, :rating, :editor, :actors]
+
 lines.each do |line|
-  columns = line.split("|")
-  movie = {
-    link: columns[0],
-    title: columns[1],
-    year: columns[2],
-    country: columns[3],
-    release_date: columns[4],
-    genre: columns[5],
-    length: columns[6],
-    rating: columns[7],
-    editor: columns[8],
-    actors: columns[9]}  
+  movie = MOVIE_KEYS.zip(line.split("|")).to_h
   movies.push movie
 end
 
