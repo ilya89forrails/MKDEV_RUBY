@@ -65,16 +65,13 @@ def actors_rd (movies) #Вывести количество фильмов, в �
     
   
 
-  actors  = movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.keys.uniq
-
-  actors2 = movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.collect{|actor, his_movies| [ his_movies.count]}
+  actors  = movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.keys.uniq.
+    zip(movies.collect{|movie| movie[:actors].chomp.split(",")}.flatten.group_by{|i| i }.collect{|actor, his_movies| [ his_movies.count]}).to_h
 
   puts actors.size 
-  puts actors2.size
+ 
 
-  result = actors.zip(actors2)
-
-  puts result.sort
+  puts actors.sort
     
   
 
