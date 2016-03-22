@@ -86,10 +86,7 @@ filename = "movies.txt"
 
 MOVIE_KEYS = [:link, :title, :year, :country, :release_date, :genre, :length, :rating, :editor, :actors]
 
-lines = CSV.read(filename, col_sep: '|')
-
-movies = lines.collect { |line| OpenStruct.new(MOVIE_KEYS.zip(line).to_h) }
-
+movies = CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS).collect{|line| OpenStruct.new(line.to_h)}
 
 
 #five_longest_movies (movies)
@@ -97,6 +94,6 @@ movies = lines.collect { |line| OpenStruct.new(MOVIE_KEYS.zip(line).to_h) }
 #editors (movies)
 #not_US (movies)
 #editors_gr(movies)
-actors_rd(movies)
+#actors_rd(movies)
 movies_per_month(movies)
 
