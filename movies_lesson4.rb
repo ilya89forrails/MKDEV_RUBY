@@ -62,7 +62,7 @@ def actors_rd (movies) #Вывести количество фильмов, в �
   puts
 
   puts  movies.collect{|movie| movie.actors.chomp.split(",")}.
-    flatten.group_by{|i| i}.
+    flatten.group_by(&:itself).
     collect{|actor, his_movies| [actor, his_movies.count]}.sort
 
 end
@@ -97,6 +97,6 @@ movies = lines.collect { |line| OpenStruct.new(MOVIE_KEYS.zip(line).to_h) }
 #editors (movies)
 #not_US (movies)
 #editors_gr(movies)
-#actors_rd(movies)
+actors_rd(movies)
 movies_per_month(movies)
 
