@@ -1,33 +1,58 @@
-load 'MoviesList.rb'
+require_relative 'movies_list.rb'
 
 
 filename = "movies.txt"
 imdb_250 = MoviesList.new(filename) 
 
+puts
+puts "Фильмы, отсортированные по стране:"
+puts imdb_250.sort_by("country") # сортировка по заданному полю
 
-imdb_250.sort_by("country") 
+puts
+puts "10 самых длинных фильмов:"
+puts imdb_250.longest(10)  #длинные фильмы, количество фильмов как параметр
 
-imdb_250.longest_movies(10)  #длинные фильмы, количество фильмов как параметр
+puts
+puts "5 самых коротких фильмов:"
+puts imdb_250.shortest(5) #короткие фильмы
 
-imdb_250.shortest_movies(5) #короткие фильмы
+puts
+puts "Все фильмы жанра Action, отсортированные по дате выхода:"
+puts imdb_250.by_genre("Action") #фильмы определенного жанра, отсортированные по дате
 
-imdb_250.all_by_genre("Action") #фильмы определенного жанра, отсортированные по дате
+puts
+puts "Все фильмы кроме Comedy, отсортированные по дате выхода:"
+puts imdb_250.except_genre("Comedy") #фильмы за исключением опред жанра, отсортированные по дате
 
-imdb_250.all_except_genre("Comedy") #фильмы за исключением опред жанра, отсортированные по дате
+puts
+puts "Список всех режиссёров по алфавиту:"
+puts imdb_250.all_editors #все режиссеры по алфавиту
 
-imdb_250.all_editors #все режиссеры по алфавиту
+puts
+puts "Количество фильмов, снятых в Германии:"
+puts imdb_250.count_by_country ("Germany") #количество фильмов снятых в опред стране
 
-imdb_250.count_by_country ("Germany") #количество фильмов снятых в опред стране
+puts
+puts "Количество фильмов, снятых в не во Франции:"
+puts imdb_250.count_except_country ("France") #количество фильмов за исключением опред стараны
 
-imdb_250.count_except_country ("France") #количество фильмов за исключением опред стараны
+puts
+puts "Количество фильмов, в которых снимался каждый актер:"
+puts imdb_250.count_by_actors #количество фильмов по каждому актеру
 
-imdb_250.count_by_actors #количество фильмов по каждому актеру
+puts
+puts "Количество фильмов, снятых каждым режиссером:"
+puts imdb_250.count_by_editors #как аналог по режиссерам
 
-imdb_250.count_by_editors #как аналог по режиссерам
+puts
+puts "Количество фильмов по дням:" 
+puts imdb_250.by_day #количество по дням месяца
 
-imdb_250.movies_by_day #количество по дням месяца
+puts
+puts "Количество фильмов по месяцам:" 
+puts imdb_250.by_month #количество по месяцам
 
-imdb_250.movies_by_month #количество по месяцам
-
-imdb_250.movies_by_year #количество по годам
+puts
+puts "Количество фильмов по годам выхода:" 
+puts imdb_250.by_year #количество по годам
 
