@@ -22,7 +22,7 @@ end
 
 def sort_by (field)
    @movies.sort_by {|movie| movie.send(field)}.
-     collect{|movie| movie.title + " " + movie.send(field)}
+     collect{|movie| movie.to_s + " " + movie.send(field)}
 end
 
 
@@ -82,26 +82,25 @@ end
 
 
 def by_day
-  @movies.collect{|movie| (Date.strptime(movie.release_date, '%Y-%m-%d').day if movie.release_date.length==10)}.
+  @movies.collect(&:release_day).
     group_by{|i| i}.collect{|e, group| [e, group.count]}.to_h.
-    delete_if{|key, value| key == nil }.sort.
+    delete_if{|key, value| key.nil?}.sort.
     collect{|a,b| (a.to_s + " => " + b.to_s)}
 end
 
 
 def by_month
-  @movies.collect{|movie| (Date.strptime(movie.release_date, '%Y-%m-%d').mon if movie.release_date.length==10) ||
-    (Date.strptime(movie.release_date, '%Y-%m').mon if  movie.release_date.length==7)}.
+  @movies.collect(&:release_month).
     group_by{|i| i}.collect{|e, group| [e, group.count]}.to_h.
-    delete_if{|key, value| key == nil }.sort.
-    collect{|a,b| (Date::MONTHNAMES[a].to_s + " => " + b.to_s)}
+    delete_if{|key, value| key.nil?}.sort_by{|key, value| Date.parse(key).mon}.
+    collect{|a,b| (a.to_s + " => " + b.to_s)}
 end
 
 
 def by_year
-  @movies.collect{|movie| Date.strptime(movie.release_date, '%Y').year}.
+  @movies.collect(&:release_year).
     group_by{|i| i}.collect{|e, group| [e, group.count]}.to_h.
-    delete_if{|key, value| key == nil }.sort.
+    delete_if{|key, value| key.nil?}.sort.
     collect{|a,b| (a.to_s + " => " + b.to_s)}
 end
 

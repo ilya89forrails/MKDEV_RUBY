@@ -29,6 +29,28 @@ class Movie
     @genre.include?(genre)
   end
 
+  def release_year
+    Date.strptime(@release_date, '%Y').year
+  end
+
+  def release_month
+    if @release_date.length==10
+      Date::MONTHNAMES[Date.strptime(@release_date, '%Y-%m-%d').mon]
+    elsif @release_date.length==7
+      Date::MONTHNAMES[Date.strptime(@release_date, '%Y-%m').mon]
+    end
+  end
+
+  def release_day
+    if @release_date.length==10
+      Date.strptime(@release_date, '%Y-%m-%d').day
+    end
+  end
+
+  def to_s
+      "#{@title} (#{@year}), #{@genre} - #{@editor}; #{@actors}" 
+  end
+
 
 
 end
