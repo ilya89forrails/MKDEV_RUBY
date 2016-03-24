@@ -26,13 +26,13 @@ class MoviesList
 
 
   def longest (number) 
-     @movies.sort_by{|movie| movie.length}.reverse.first(number).
+     @movies.sort_by(&:length).reverse.first(number).
       collect{|movie| movie.title + " " + movie.length.to_s} 
   end
 
 
   def shortest (number) 
-    @movies.sort_by{|movie| movie.length}.first(number).
+    @movies.sort_by(&:length).first(number).
       collect{|movie| movie.title + " " + movie.length.to_s} 
   end
 
@@ -80,7 +80,7 @@ class MoviesList
 
 
   def by_day
-    @movies.collect{|movie| movie.get_day}.
+    @movies.collect{|movie| movie.release_date.day if movie.release_date!=nil}.
       group_by{|i| i}.collect{|e, group| [e, group.count]}.to_h.
       delete_if{|key, value| key.nil?}.sort.
       collect{|a,b| (a.to_s + " => " + b.to_s)}
@@ -88,7 +88,7 @@ class MoviesList
 
 
   def by_month
-    @movies.collect{|movie| movie.get_month}.
+    @movies.collect{|movie| movie.release_date.mon if movie.release_date!=nil}.
       group_by{|i| i}.collect{|e, group| [e, group.count]}.to_h.
       delete_if{|key, value| key.nil?}.sort.
       collect{|a,b| (Date::MONTHNAMES[a].to_s + " => " + b.to_s)}
@@ -96,7 +96,7 @@ class MoviesList
 
 
   def by_year
-    @movies.collect{|movie| movie.year}.
+    @movies.collect(&:year).
       group_by{|i| i}.collect{|e, group| [e, group.count]}.to_h.sort.
       collect{|a,b| (a.to_s + " => " + b.to_s)}
   end
