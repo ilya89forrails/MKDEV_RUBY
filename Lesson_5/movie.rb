@@ -11,12 +11,19 @@ class Movie
     @title = movie.title
     @year = movie.year
     @country = movie.country
-    @release_date = movie.release_date
     @genre = movie.genre
     @length = movie.length.to_i
     @rating = movie.rating
     @editor = movie.editor
     @actors = movie.actors
+
+    if movie.release_date.length == 4
+      @release_date = nil
+    elsif movie.release_date.length == 7
+      @release_date=Date.strptime(movie.release_date, "%Y-%m")
+    else
+      @release_date=Date.strptime(movie.release_date, "%Y-%m-%d")
+    end
   end
 
   attr_reader :link, :title, :year, :country, :release_date, :genre, :length, :rating, :editor, :actors
@@ -25,32 +32,24 @@ class Movie
     puts "My title is #{@title}"
   end
 
+
   def has_genre?(genre)
     @genre.include?(genre)
   end
 
-  def release_year
-    Date.strptime(@release_date, '%Y').year
+
+  def get_month
+     @release_date.mon if @release_date!=nil
   end
 
-  def release_month
-    if @release_date.length==10
-      Date::MONTHNAMES[Date.strptime(@release_date, '%Y-%m-%d').mon]
-    elsif @release_date.length==7
-      Date::MONTHNAMES[Date.strptime(@release_date, '%Y-%m').mon]
-    end
+
+  def get_day
+    @release_date.day if @release_date!=nil
   end
 
-  def release_day
-    if @release_date.length==10
-      Date.strptime(@release_date, '%Y-%m-%d').day
-    end
-  end
 
   def to_s
       "#{@title} (#{@year}), #{@genre} - #{@editor}; #{@actors}" 
   end
-
-
 
 end
