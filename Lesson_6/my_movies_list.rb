@@ -5,8 +5,6 @@ require 'ostruct'
 require_relative 'movie.rb'
 require_relative 'movies_list.rb'
 
-MY_HASH = [:title, :my_rating, :seen_at]
-
 
 
 class AncientMovie < Movie
@@ -20,8 +18,8 @@ end
 class ClassicMovie < Movie
 
   def describe
-    #x = @movies.select{|movie| movie.editor == @editor}.count.to_s
-    "#{@title} — классический фильм, режиссёр #{@editor}, (ещё "  #@movies.collect(&:editor).count.to_s + "ТУТ ТОЖЕ ЗАТЫК" + " его фильмов в списке)"
+    #x = @m_list.select{|movie| movie.editor == @editor}.count.to_s
+    "#{@title} — классический фильм, режиссёр #{@editor}, (ещё "  + @m_list.select{|m| m.editor == @editor}.count.to_s + " его фильмов в списке)"
   end
 end
 
@@ -52,7 +50,7 @@ MY_PREFERENCES = {AncientMovie: 0.2, ClassicMovie: 0.3, ModernMovie: 0.3, NewMov
 
 
   def not_seen(number)
-    @movies.select{|m| !m.watched?}.
+    @movies.reject(&:watched?).
       sort_by { |movie| MY_PREFERENCES[movie.class.to_s.to_sym] * ((movie.rating.to_f)-8.0) * rand }.
       reverse.first(number).collect{|m| m.describe}
   end
@@ -60,8 +58,10 @@ MY_PREFERENCES = {AncientMovie: 0.2, ClassicMovie: 0.3, ModernMovie: 0.3, NewMov
 
 
   def already_seen(number)
-    @movies.select{|m| m.watched?}.
-      sort_by { |movie| MY_PREFERENCES[movie.class.to_s.to_sym] * rand * "ВОТ ТУТ ВОПРОС" }.first(number).collect{|m| m.describe}
+    @movies.select(&:watched?).
+      sort_by { |movie| MY_PREFERENCES[movie.class.to_s.to_sym] * rand * my_rate(movie.title)}.
+      first(number).sort_by{|movie| when_seen?(movie.title)}.
+      collect{|m| m.describe}
   end
 
 end
@@ -69,11 +69,9 @@ end
 
 
 
-
-
-
-
 class MyMoviesList < MoviesList
+
+  MY_HASH = [:title, :my_rating, :seen_at]
 
   include Recommendations
 
@@ -84,13 +82,13 @@ class MyMoviesList < MoviesList
       collect{|film| 
       case film.year.to_i
         when  1900..1945
-          AncientMovie.new(film)
+          AncientMovie.new(film, self)
         when 1945..1969
-          ClassicMovie.new(film)
+          ClassicMovie.new(film, self)
         when 1968..1999
-          ModernMovie.new(film)
+          ModernMovie.new(film, self)
         else
-          NewMovie.new(film)  
+          NewMovie.new(film, self)  
       end}
 
     @seen_movies = CSV.read("my_movies.txt", col_sep: '|').
@@ -110,6 +108,14 @@ class MyMoviesList < MoviesList
     @movies.select{|m|m.title=="#{title}"}.collect{|m| m.class}.to_s
   end
 
+
+  def my_rate?(title)
+    @seen_movies.select{|m| m[:title]==title.to_s}.collect(&:my_rating)
+  end
+
+  def when_seen?(title)
+    @seen_movies.select{|m| m[:title]==title.to_s}.collect(&:seen_at)
+  end
 
 end
 

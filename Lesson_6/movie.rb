@@ -6,8 +6,9 @@ require 'ostruct'
 
 class Movie
  
-  def initialize(movie)
+  def initialize(movie, m_list)
 
+    @m_list = m_list
     @link = movie.link
     @title = movie.title
     @year = movie.year
@@ -49,7 +50,7 @@ class Movie
     @title.to_s.include?(CSV.read("my_movies.txt").to_s)
   end
 
-  
+
 
 
 end
