@@ -22,4 +22,4 @@ puts imdb_250.my_rate?("Goodfellas")
 
 
 
-#imdb_250.already_seen(5)
+#puts imdb_250.already_seen(5)
