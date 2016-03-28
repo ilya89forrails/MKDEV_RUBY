@@ -19,7 +19,7 @@ class ClassicMovie < Movie
 
   def describe
     #x = @m_list.select{|movie| movie.editor == @editor}.count.to_s
-   "#{@title} — классический фильм, режиссёр #{@editor}, (ещё "  + @m_list.count_by_editor(@editor).to_s + " его фильмов в списке)"
+   "#{@title} — классический фильм, режиссёр #{@editor}, (ещё "  + (@m_list.count_by_editor(@editor)-1).to_s + " его фильмов в списке)"
   end
 end
 
@@ -59,7 +59,7 @@ MY_PREFERENCES = {AncientMovie: 0.2, ClassicMovie: 0.4, ModernMovie: 0.2, NewMov
 
   def already_seen(number)
     @movies.select(&:watched?).
-     sort_by { |movie| MY_PREFERENCES[movie.class.to_s.to_sym] * rand * my_rate?(movie.title)}.
+     sort_by { |movie| MY_PREFERENCES[movie.class.to_s.to_sym] * rand * (my_rate?(movie.title).to_f)}.
       first(number).sort_by{|movie| when_seen?(movie.title)}.
       collect{|m| m.describe}
   end
@@ -110,11 +110,11 @@ class MyMoviesList < MoviesList
 
 
   def my_rate?(title)
-    @seen_movies.select{|m| m[:title]==title.to_s}.collect(&:my_rating)
+    @seen_movies.select{|m| m[:title]==title.to_s}.collect{|m| m[:my_rating]}
   end
 
   def when_seen?(title)
-    @seen_movies.select{|m| m[:title]==title.to_s}.collect(&:seen_at)
+    @seen_movies.select{|m| m[:title]==title.to_s}.collect{|m| m[:my_rating]}
   end
 
   

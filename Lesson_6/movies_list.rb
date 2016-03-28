@@ -106,7 +106,10 @@ class MoviesList
     puts @movies.collect{|m| m.release_date}
   end
 
-
+  def count_by_editor(editor) 
+    @movies.select{|m| m.editor==editor}.count
+  end
+  
 end
 
 

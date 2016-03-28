@@ -16,10 +16,10 @@ imdb_250 = MyMoviesList.new(filename)
 #imdb_250.watched("Good Will Hunting", 7)
 #imdb_250.watched("City of God", 10)
 
-#puts imdb_250.not_seen(5)
+puts imdb_250.not_seen(5)
 
-puts imdb_250.my_rate?("Goodfellas")
+#puts imdb_250.my_rate?("Goodfellas")
 
 
 
-#puts imdb_250.already_seen(5)
+puts imdb_250.already_seen(5)
