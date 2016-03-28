@@ -1,5 +1,4 @@
 require_relative 'my_movies_list.rb'
-require_relative 'movie.rb'
 
 
 
@@ -16,10 +15,11 @@ imdb_250 = MyMoviesList.new(filename)
 #imdb_250.watched("Good Will Hunting", 7)
 #imdb_250.watched("City of God", 10)
 
+
+puts "Рекомендуемые фильмы из непросмотренных:"
 puts imdb_250.not_seen(5)
 
-#puts imdb_250.my_rate?("Goodfellas")
 
-
-
+puts
+puts "Рекомендуемые фильмы из просмотренных:"
 puts imdb_250.already_seen(5)

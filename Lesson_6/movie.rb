@@ -3,7 +3,6 @@ require 'date'
 require 'ostruct'
 
 
-
 class Movie
  
   def initialize(movie, m_list)
@@ -47,7 +46,7 @@ class Movie
 
 
   def watched?
-    @title.to_s.include?(CSV.read("my_movies.txt").to_s)
+    (CSV.read("my_movies.txt").to_s).include?@title.to_s
   end
 
 
