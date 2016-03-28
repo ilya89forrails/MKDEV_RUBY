@@ -44,12 +44,4 @@ class Movie
       "#{@title} (#{@year}), #{@genre} - #{@editor}; #{@actors}" 
   end
 
-
-  def watched?
-    (CSV.read("my_movies.txt").to_s).include?@title.to_s
-  end
-
-
-  
-
 end
