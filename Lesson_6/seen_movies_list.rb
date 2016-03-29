@@ -1,7 +1,9 @@
-
+require 'singleton'
 
 class SeenMoviesList
   
+  include Singleton
+
   MY_HASH = [:title, :my_rating, :seen_at]
 
   def initialize
@@ -15,14 +17,14 @@ class SeenMoviesList
   end
 
   def watched?(title)
-    (@seen_movies.collect{|m| m[:title]}.flatten.to_s).include?title.to_s
+    (@seen_movies.collect{|m| m[:title]}).include?title
   end
 
-  def my_rate?(title)
+  def my_rate_for(title)
     @seen_movies.select{|m| m[:title]==title.to_s}.collect{|m| m[:my_rating]}
   end
 
-  def when_seen?(title)
+  def when_seen(title)
     @seen_movies.select{|m| m[:title]==title.to_s}.collect{|m| m[:seen_at]}
   end
 
