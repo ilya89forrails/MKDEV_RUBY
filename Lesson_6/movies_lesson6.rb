@@ -16,10 +16,30 @@ imdb_250 = MyMoviesList.new(filename)
 #imdb_250.watched("City of God", 10)
 
 
-puts "Рекомендуемые фильмы из непросмотренных:"
-puts imdb_250.not_seen(5)
+#puts "Рекомендуемые фильмы из непросмотренных:"
+#puts imdb_250.not_seen(5)
 
 
-puts
-puts "Рекомендуемые фильмы из просмотренных:"
-puts imdb_250.already_seen(5)
+#puts
+#puts "Рекомендуемые фильмы из просмотренных:"
+#puts imdb_250.already_seen(5)
+
+#
+#puts imdb_250.print{ |movie| "#{movie.year}: #{movie.title}" }
+
+#puts imdb_250.sorted_by{ |movie| [movie.genre, movie.year] }
+
+#imdb_250.add_sort_algo (:genres_years) { |movie| [movie.genre, movie.year] }
+
+#puts imdb_250.sort_by(:genres_years)
+
+
+
+
+#imdb_250.add_filter(:genres){|movie, *genres| genres.include?(movie.genre)}
+imdb_250.add_filter(:years){|movie, from, to| (from..to).include?(movie.year)}
+
+puts imdb_250.filter(
+   # genres: ['Comedy', 'Horror'],
+    years: [2005, 2010],
+  )
