@@ -16,13 +16,12 @@ class MoviesList
     @movies = CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS).
       collect{|line| OpenStruct.new(line.to_h)}.
       collect{|film| Movie.new(film)}
+
   end
 
 
-  def sort_by (field)
-     @movies.sort_by {|movie| movie.send(field)}.
-       collect{|movie| movie.to_s + " " + movie.send(field)}
-  end
+  @@sort  = Hash.new
+  @@filter = Hash.new
 
 
   def longest (number) 
@@ -102,14 +101,54 @@ class MoviesList
   end
 
 
-  def show
-    puts @movies.collect{|m| m.release_date}
-  end
-
-  def count_by_editor(editor) 
+  def count_by_editor (editor) 
     @movies.select{|m| m.editor==editor}.count
   end
+
   
+  def print (&block)
+    block_given? ? @movies.collect(&block) : "You dont give any block..."
+  end
+
+
+  def sorted_by (&block)
+    block_given? ? @movies.sort_by(&block) : "You dont give any block..."
+  end
+ 
+
+  def add_sort_algo (key, &value)
+    @@sort[key] = value
+  end
+
+
+  def add_filter (key, &value)
+    @@filter[key] = value
+  end
+
+
+  def sort_by (field)
+    if field.class == String
+      @movies.sort_by {|movie| movie.send(field)}.
+        collect{|movie| movie.to_s + " " + movie.send(field).to_s}
+    elsif field.class == Symbol
+      var = @@sort[field]
+      @movies.sort_by(&var)
+    end
+  end
+
+
+  def filter (args)
+    result = @movies
+
+    args.each do |arg|
+      result = result.select{|m| @@filter[arg]}
+    end
+  end
+
+
+  
+
+
 end
 
 
