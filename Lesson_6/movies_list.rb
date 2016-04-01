@@ -20,8 +20,8 @@ class MoviesList
   end
 
 
-  @@sort  = Hash.new
-  @@filter = Hash.new
+  @@sort, @@filter = {}, {}
+   
 
 
   def longest (number) 
@@ -107,13 +107,13 @@ class MoviesList
 
   
   def print (&block)
-    block_given? ? @movies.collect(&block) : "You dont give any block..."
+    block_given? ? @movies.collect(&block) : @movies.collect{|m| m.to_s}
   end
 
 
-  def sorted_by (&block)
-    block_given? ? @movies.sort_by(&block) : "You dont give any block..."
-  end
+ # def sorted_by (&block)
+  #  block_given? ? @movies.sort_by(&block) : @movies.collect{|m| m.to_s}
+ # end
  
 
   def add_sort_algo (key, &value)
@@ -126,23 +126,30 @@ class MoviesList
   end
 
 
-  def sort_by (field)
-    if field.class == String
-      @movies.sort_by {|movie| movie.send(field)}.
-        collect{|movie| movie.to_s + " " + movie.send(field).to_s}
-    elsif field.class == Symbol
-      var = @@sort[field]
+  def sort_by (field1, &field2)
+
+    case
+    when field1.is_a?(String)
+      @movies.sort_by {|movie| movie.send(field1)}
+    when field1.is_a?(Symbol)
+      var = @@sort[field1]
       @movies.sort_by(&var)
+    when block_given?
+      @movies.sort_by(&field2)
     end
   end
 
 
   def filter (args)
-    result = @movies
+   # result = @movies
 
-    args.each do |arg|
-      result = result.select{|m| @@filter[arg]}
-    end
+   # args.each do |arg|
+   #   result = result.select{|m| @@filter[arg]}
+   # end
+
+    args.reduce(@movies) {|memo, (arg, value)| memo.select{|m| @@filter[arg][m, *value]}}
+
+
   end
 
 
