@@ -27,18 +27,20 @@ imdb_250 = MyMoviesList.new(filename)
 #
 #puts imdb_250.print{ |movie| "#{movie.year}: #{movie.title}" }
 
-puts imdb_250.sort_by{ |movie| [movie.genre, movie.year] }
+#puts imdb_250.sort_by{ |movie| [movie.genre, movie.year] }
 
-imdb_250.add_sort_algo (:genres_years) { |movie| [movie.genre, movie.year] }
+#imdb_250.add_sort_algo (:genres_years) { |movie| [movie.genre, movie.year] }
 
-puts imdb_250.sort_by(:genres_years)
+#puts imdb_250.sort_by(:genres_years)
 
-puts imdb_250.sort_by("country") # сортировка по заданному полю
+#puts imdb_250.sort_by("country") # сортировка по заданному полю
 
-imdb_250.add_filter(:genres){|movie, *genres| genres.include?(movie.genre)}
-#imdb_250.add_filter(:years){|movie, from, to| (from..to).include?(movie.year)}
+imdb_250.add_filter(:genres){|movie, *genres| movie.has_genre?(genres)}
+imdb_250.add_filter(:years){|movie, from, to| (from..to).include?(movie.year.to_i)}
 
 puts imdb_250.filter(
-    genres: ['Drama', 'Adventure'],
-    #years: [1950, 2010],
+    genres: ['Drama', 'Crime'],
+    years: [2000, 2010]
   )
+
+

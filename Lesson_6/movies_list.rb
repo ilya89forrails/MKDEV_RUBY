@@ -107,14 +107,10 @@ class MoviesList
 
   
   def print (&block)
-    block_given? ? @movies.collect(&block) : @movies.collect{|m| m.to_s}
+    block = proc{|m| m.to_s} if !block_given?
+    @movies.collect(&block)
   end
 
-
- # def sorted_by (&block)
-  #  block_given? ? @movies.sort_by(&block) : @movies.collect{|m| m.to_s}
- # end
- 
 
   def add_sort_algo (key, &value)
     @@sort[key] = value
@@ -126,7 +122,7 @@ class MoviesList
   end
 
 
-  def sort_by (field1, &field2)
+  def sort_by (field1=nil, &field2)
 
     case
     when field1.is_a?(String)
@@ -134,21 +130,19 @@ class MoviesList
     when field1.is_a?(Symbol)
       var = @@sort[field1]
       @movies.sort_by(&var)
-    when block_given?
+    when field2
       @movies.sort_by(&field2)
     end
   end
 
 
   def filter (args)
-   # result = @movies
 
-   # args.each do |arg|
-   #   result = result.select{|m| @@filter[arg]}
-   # end
+  #  @movies.each{|m| m.show(["Drama", "Crime"])}
 
-    args.reduce(@movies) {|memo, (arg, value)| memo.select{|m| @@filter[arg][m, *value]}}
+  # puts  @movies.select{|movie|  movie.has_genre?(["Drama", "Crime"])}
 
+    args.reduce(@movies) {|memo, (arg, value)| memo.select{|m| @@filter[arg].call(m, *value)}}
 
   end
 

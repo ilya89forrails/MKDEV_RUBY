@@ -30,13 +30,15 @@ class Movie
 
   attr_reader :link, :title, :year, :country, :release_date, :genre, :length, :rating, :editor, :actors
 
-  def show
-    puts "My title is #{@title}"
+  def show (genre)
+  p  @genre.split(",")
+
+
   end
 
 
   def has_genre?(genre)
-    @genre.include?(genre)
+    !(@genre.split(",") & genre).empty?
   end
 
 
