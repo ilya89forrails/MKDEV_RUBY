@@ -1,1 +1,178 @@
-{:years=>[2005, 2010]}
+The Shawshank Redemption (1994), Crime,Drama - Frank Darabont; Tim Robbins,Morgan Freeman,Bob Gunton
+The Godfather (1972), Crime,Drama - Francis Ford Coppola; Marlon Brando,Al Pacino,James Caan
+The Godfather: Part II (1974), Crime,Drama - Francis Ford Coppola; Al Pacino,Robert De Niro,Robert Duvall
+The Dark Knight (2008), Action,Crime,Drama - Christopher Nolan; Christian Bale,Heath Ledger,Aaron Eckhart
+12 Angry Men (1957), Crime,Drama - Sidney Lumet; Henry Fonda,Lee J. Cobb,Martin Balsam
+Schindler's List (1993), Biography,Drama,History - Steven Spielberg; Liam Neeson,Ralph Fiennes,Ben Kingsley
+Pulp Fiction (1994), Crime,Drama - Quentin Tarantino; John Travolta,Uma Thurman,Samuel L. Jackson
+Fight Club (1999), Drama - David Fincher; Brad Pitt,Edward Norton,Helena Bonham Carter
+Forrest Gump (1994), Drama,Romance - Robert Zemeckis; Tom Hanks,Robin Wright,Gary Sinise
+One Flew Over the Cuckoo's Nest (1975), Drama - Milos Forman; Jack Nicholson,Louise Fletcher,Michael Berryman
+Goodfellas (1990), Biography,Crime,Drama - Martin Scorsese; Robert De Niro,Ray Liotta,Joe Pesci
+Seven Samurai (1954), Drama - Akira Kurosawa; Toshirô Mifune,Takashi Shimura,Keiko Tsushima
+City of God (2002), Crime,Drama - Fernando Meirelles; Alexandre Rodrigues,Matheus Nachtergaele,Leandro Firmino
+Se7en (1995), Drama,Mystery,Thriller - David Fincher; Morgan Freeman,Brad Pitt,Kevin Spacey
+The Silence of the Lambs (1991), Crime,Drama,Thriller - Jonathan Demme; Jodie Foster,Anthony Hopkins,Lawrence A. Bonney
+The Usual Suspects (1995), Crime,Drama,Thriller - Bryan Singer; Kevin Spacey,Gabriel Byrne,Chazz Palminteri
+It's a Wonderful Life (1946), Drama,Family,Fantasy - Frank Capra; James Stewart,Donna Reed,Lionel Barrymore
+Life Is Beautiful (1997), Comedy,Drama,Romance - Roberto Benigni; Roberto Benigni,Nicoletta Braschi,Giorgio Cantarini
+Léon: The Professional (1994), Crime,Drama,Thriller - Luc Besson; Jean Reno,Gary Oldman,Natalie Portman
+Interstellar (2014), Adventure,Drama,Sci-Fi - Christopher Nolan; Matthew McConaughey,Anne Hathaway,Jessica Chastain
+Saving Private Ryan (1998), Action,Drama,War - Steven Spielberg; Tom Hanks,Matt Damon,Tom Sizemore
+American History X (1998), Crime,Drama - Tony Kaye; Edward Norton,Edward Furlong,Beverly D'Angelo
+Casablanca (1942), Drama,Romance,War - Michael Curtiz; Humphrey Bogart,Ingrid Bergman,Paul Henreid
+City Lights (1931), Comedy,Drama,Romance - Charles Chaplin; Charles Chaplin,Virginia Cherrill,Florence Lee
+The Intouchables (2011), Biography,Comedy,Drama - Olivier Nakache; François Cluzet,Omar Sy,Anne Le Ny
+Modern Times (1936), Comedy,Drama - Charles Chaplin; Charles Chaplin,Paulette Goddard,Henry Bergman
+Whiplash (2014), Drama,Music - Damien Chazelle; Miles Teller,J.K. Simmons,Melissa Benoist
+The Green Mile (1999), Crime,Drama,Fantasy - Frank Darabont; Tom Hanks,Michael Clarke Duncan,David Morse
+The Pianist (2002), Biography,Drama,War - Roman Polanski; Adrien Brody,Thomas Kretschmann,Frank Finlay
+The Departed (2006), Crime,Drama,Thriller - Martin Scorsese; Leonardo DiCaprio,Matt Damon,Jack Nicholson
+Gladiator (2000), Action,Drama - Ridley Scott; Russell Crowe,Joaquin Phoenix,Connie Nielsen
+Apocalypse Now (1979), Drama,War - Francis Ford Coppola; Martin Sheen,Marlon Brando,Robert Duvall
+Sunset Blvd. (1950), Drama,Film-Noir - Billy Wilder; William Holden,Gloria Swanson,Erich von Stroheim
+The Prestige (2006), Drama,Mystery,Thriller - Christopher Nolan; Christian Bale,Hugh Jackman,Scarlett Johansson
+The Lion King (1994), Animation,Adventure,Drama - Roger Allers; Matthew Broderick,Jeremy Irons,James Earl Jones
+The Lives of Others (2006), Drama,Thriller - Florian Henckel von Donnersmarck; Ulrich Mühe,Martina Gedeck,Sebastian Koch
+The Great Dictator (1940), Comedy,Drama,War - Charles Chaplin; Charles Chaplin,Paulette Goddard,Jack Oakie
+Cinema Paradiso (1988), Comedy,Drama - Giuseppe Tornatore; Philippe Noiret,Enzo Cannavale,Antonella Attili
+Paths of Glory (1957), Drama,War - Stanley Kubrick; Kirk Douglas,Ralph Meeker,Adolphe Menjou
+American Beauty (1999), Drama,Romance - Sam Mendes; Kevin Spacey,Annette Bening,Thora Birch
+Grave of the Fireflies (1988), Animation,Drama,War - Isao Takahata; Tsutomu Tatsumi,Ayano Shiraishi,Akemi Yamaguchi
+Citizen Kane (1941), Drama,Mystery - Orson Welles; Orson Welles,Joseph Cotten,Dorothy Comingore
+Oldboy (2003), Drama,Mystery,Thriller - Chan-wook Park; Min-sik Choi,Ji-tae Yu,Hye-jeong Kang
+Das Boot (1981), Adventure,Drama,War - Wolfgang Petersen; Jürgen Prochnow,Herbert Grönemeyer,Klaus Wennemann
+M (1931), Crime,Drama,Thriller - Fritz Lang; Peter Lorre,Ellen Widmann,Inge Landgut
+Once Upon a Time in America (1984), Crime,Drama - Sergio Leone; Robert De Niro,James Woods,Elizabeth McGovern
+Witness for the Prosecution (1957), Drama,Mystery,Thriller - Billy Wilder; Tyrone Power,Marlene Dietrich,Charles Laughton
+Reservoir Dogs (1992), Crime,Drama - Quentin Tarantino; Harvey Keitel,Tim Roth,Michael Madsen
+Braveheart (1995), Biography,Drama,History - Mel Gibson; Mel Gibson,Sophie Marceau,Patrick McGoohan
+A Clockwork Orange (1971), Crime,Drama,Sci-Fi - Stanley Kubrick; Malcolm McDowell,Patrick Magee,Michael Bates
+Double Indemnity (1944), Crime,Drama,Film-Noir - Billy Wilder; Fred MacMurray,Barbara Stanwyck,Edward G. Robinson
+Taxi Driver (1976), Crime,Drama - Martin Scorsese; Robert De Niro,Jodie Foster,Cybill Shepherd
+Requiem for a Dream (2000), Drama - Darren Aronofsky; Ellen Burstyn,Jared Leto,Jennifer Connelly
+To Kill a Mockingbird (1962), Drama - Robert Mulligan; Gregory Peck,John Megna,Frank Overton
+Lawrence of Arabia (1962), Adventure,Biography,Drama - David Lean; Peter O'Toole,Alec Guinness,Anthony Quinn
+Eternal Sunshine of the Spotless Mind (2004), Drama,Romance,Sci-Fi - Michel Gondry; Jim Carrey,Kate Winslet,Tom Wilkinson
+Full Metal Jacket (1987), Drama,War - Stanley Kubrick; Matthew Modine,R. Lee Ermey,Vincent D'Onofrio
+The Sting (1973), Comedy,Crime,Drama - George Roy Hill; Paul Newman,Robert Redford,Robert Shaw
+Bicycle Thieves (1948), Drama - Vittorio De Sica; Lamberto Maggiorani,Enzo Staiola,Lianella Carell
+Amadeus (1984), Biography,Drama,History - Milos Forman; F. Murray Abraham,Tom Hulce,Elizabeth Berridge
+Snatch. (2000), Comedy,Crime - Guy Ritchie; Jason Statham,Brad Pitt,Benicio Del Toro
+The Kid (1921), Comedy,Drama,Family - Charles Chaplin; Charles Chaplin,Edna Purviance,Jackie Coogan
+L.A. Confidential (1997), Crime,Drama,Mystery - Curtis Hanson; Kevin Spacey,Russell Crowe,Guy Pearce
+Rashomon (1950), Crime,Drama - Akira Kurosawa; Toshirô Mifune,Machiko Kyô,Masayuki Mori
+All About Eve (1950), Drama - Joseph L. Mankiewicz; Bette Davis,Anne Baxter,George Sanders
+The Apartment (1960), Comedy,Drama,Romance - Billy Wilder; Jack Lemmon,Shirley MacLaine,Fred MacMurray
+Inglourious Basterds (2009), Adventure,Drama,War - Quentin Tarantino; Brad Pitt,Diane Kruger,Eli Roth
+The Treasure of the Sierra Madre (1948), Action,Adventure,Drama - John Huston; Humphrey Bogart,Walter Huston,Tim Holt
+A Separation (2011), Drama - Asghar Farhadi; Peyman Moaadi,Leila Hatami,Sareh Bayat
+Metropolis (1927), Drama,Sci-Fi - Fritz Lang; Brigitte Helm,Alfred Abel,Gustav Fröhlich
+Yojimbo (1961), Drama - Akira Kurosawa; Toshirô Mifune,Eijirô Tôno,Tatsuya Nakadai
+Scarface (1983), Crime,Drama - Brian De Palma; Al Pacino,Michelle Pfeiffer,Steven Bauer
+3 Idiots (2009), Comedy,Drama - Rajkumar Hirani; Aamir Khan,Madhavan,Mona Singh
+Raging Bull (1980), Biography,Drama,Sport - Martin Scorsese; Robert De Niro,Cathy Moriarty,Joe Pesci
+Downfall (2004), Biography,Drama,History - Oliver Hirschbiegel; Bruno Ganz,Alexandra Maria Lara,Ulrich Matthes
+The Hunt (2012), Drama - Thomas Vinterberg; Mads Mikkelsen,Thomas Bo Larsen,Annika Wedderkopp
+Chinatown (1974), Drama,Mystery,Thriller - Roman Polanski; Jack Nicholson,Faye Dunaway,John Huston
+The Great Escape (1963), Adventure,Drama,History - John Sturges; Steve McQueen,James Garner,Richard Attenborough
+Good Will Hunting (1997), Drama - Gus Van Sant; Robin Williams,Matt Damon,Ben Affleck
+On the Waterfront (1954), Crime,Drama - Elia Kazan; Marlon Brando,Karl Malden,Lee J. Cobb
+Heat (1995), Action,Crime,Drama - Michael Mann; Al Pacino,Robert De Niro,Val Kilmer
+Pan's Labyrinth (2006), Drama,Fantasy,War - Guillermo del Toro; Ivana Baquero,Ariadna Gil,Sergi López
+Mr. Smith Goes to Washington (1939), Drama - Frank Capra; James Stewart,Jean Arthur,Claude Rains
+The Bridge on the River Kwai (1957), Adventure,Drama,War - David Lean; William Holden,Alec Guinness,Jack Hawkins
+Ran (1985), Action,Drama,War - Akira Kurosawa; Tatsuya Nakadai,Akira Terao,Jinpachi Nezu
+Ikiru (1952), Drama - Akira Kurosawa; Takashi Shimura,Nobuo Kaneko,Shin'ichi Himori
+The Seventh Seal (1957), Drama,Fantasy - Ingmar Bergman; Max von Sydow,Gunnar Björnstrand,Bengt Ekerot
+The Gold Rush (1925), Adventure,Comedy,Drama - Charles Chaplin; Charles Chaplin,Mack Swain,Tom Murray
+Wild Strawberries (1957), Drama - Ingmar Bergman; Victor Sjöström,Bibi Andersson,Ingrid Thulin
+The Secret in Their Eyes (2009), Drama,Mystery,Thriller - Juan José Campanella; Ricardo Darín,Soledad Villamil,Pablo Rago
+Lock, Stock and Two Smoking Barrels (1998), Comedy,Crime - Guy Ritchie; Jason Flemyng,Dexter Fletcher,Nick Moran
+The Elephant Man (1980), Biography,Drama - David Lynch; Anthony Hopkins,John Hurt,Anne Bancroft
+Casino (1995), Biography,Crime,Drama - Martin Scorsese; Robert De Niro,Sharon Stone,Joe Pesci
+The Wolf of Wall Street (2013), Biography,Comedy,Crime - Martin Scorsese; Leonardo DiCaprio,Jonah Hill,Margot Robbie
+Warrior (2011), Drama,Sport - Gavin O'Connor; Tom Hardy,Nick Nolte,Joel Edgerton
+Gran Torino (2008), Drama - Clint Eastwood; Clint Eastwood,Bee Vang,Christopher Carley
+V for Vendetta (2005), Action,Drama,Thriller - James McTeigue; Hugo Weaving,Natalie Portman,Rupert Graves
+The Big Lebowski (1998), Comedy,Crime - Joel Coen; Jeff Bridges,John Goodman,Julianne Moore
+Judgment at Nuremberg (1961), Drama,History,War - Stanley Kramer; Spencer Tracy,Burt Lancaster,Richard Widmark
+A Beautiful Mind (2001), Biography,Drama - Ron Howard; Russell Crowe,Ed Harris,Jennifer Connelly
+The Deer Hunter (1978), Drama,War - Michael Cimino; Robert De Niro,Christopher Walken,John Cazale
+Cool Hand Luke (1967), Crime,Drama - Stuart Rosenberg; Paul Newman,George Kennedy,Strother Martin
+Gone with the Wind (1939), Drama,Romance,War - Victor Fleming; Clark Gable,Vivien Leigh,Thomas Mitchell
+Fargo (1996), Crime,Drama,Thriller - Joel Coen; William H. Macy,Frances McDormand,Steve Buscemi
+Trainspotting (1996), Drama - Danny Boyle; Ewan McGregor,Ewen Bremner,Jonny Lee Miller
+Gone Girl (2014), Drama,Mystery,Thriller - David Fincher; Ben Affleck,Rosamund Pike,Neil Patrick Harris
+Into the Wild (2007), Adventure,Biography,Drama - Sean Penn; Emile Hirsch,Vince Vaughn,Catherine Keener
+Dial M for Murder (1954), Crime,Thriller - Alfred Hitchcock; Ray Milland,Grace Kelly,Robert Cummings
+The Sixth Sense (1999), Drama,Mystery,Thriller - M. Night Shyamalan; Bruce Willis,Haley Joel Osment,Toni Collette
+Rush (2013), Action,Biography,Drama - Ron Howard; Daniel Brühl,Chris Hemsworth,Olivia Wilde
+The Maltese Falcon (1941), Crime,Drama,Film-Noir - John Huston; Humphrey Bogart,Mary Astor,Gladys George
+Mary and Max (2009), Animation,Comedy,Drama - Adam Elliot; Toni Collette,Philip Seymour Hoffman,Eric Bana
+No Country for Old Men (2007), Crime,Drama,Thriller - Ethan Coen; Tommy Lee Jones,Javier Bardem,Josh Brolin
+Hotel Rwanda (2004), Drama,History,War - Terry George; Don Cheadle,Sophie Okonedo,Joaquin Phoenix
+Incendies (2010), Drama,Mystery,War - Denis Villeneuve; Lubna Azabal,Mélissa Désormeaux-Poulin,Maxim Gaudette
+The Wages of Fear (1953), Adventure,Drama,Thriller - Henri-Georges Clouzot; Yves Montand,Charles Vanel,Peter van Eyck
+Platoon (1986), Drama,War - Oliver Stone; Charlie Sheen,Tom Berenger,Willem Dafoe
+Butch Cassidy and the Sundance Kid (1969), Biography,Crime,Western - George Roy Hill; Paul Newman,Robert Redford,Katharine Ross
+Network (1976), Drama - Sidney Lumet; Faye Dunaway,William Holden,Peter Finch
+There Will Be Blood (2007), Drama - Paul Thomas Anderson; Daniel Day-Lewis,Paul Dano,Ciarán Hinds
+Touch of Evil (1958), Crime,Film-Noir,Thriller - Orson Welles; Charlton Heston,Orson Welles,Janet Leigh
+The 400 Blows (1959), Crime,Drama - François Truffaut; Jean-Pierre Léaud,Albert Rémy,Claire Maurier
+Stand by Me (1986), Adventure,Drama - Rob Reiner; Wil Wheaton,River Phoenix,Corey Feldman
+12 Years a Slave (2013), Biography,Drama,History - Steve McQueen; Chiwetel Ejiofor,Michael Kenneth Williams,Michael Fassbender
+Annie Hall (1977), Comedy,Drama,Romance - Woody Allen; Woody Allen,Diane Keaton,Tony Roberts
+Persona (1966), Drama - Ingmar Bergman; Bibi Andersson,Liv Ullmann,Margaretha Krook
+The Grand Budapest Hotel (2014), Adventure,Comedy,Drama - Wes Anderson; Ralph Fiennes,F. Murray Abraham,Mathieu Amalric
+Amores Perros (2000), Drama,Thriller - Alejandro González Iñárritu; Emilio Echevarría,Gael García Bernal,Goya Toledo
+In the Name of the Father (1993), Biography,Drama,History - Jim Sheridan; Daniel Day-Lewis,Pete Postlethwaite,Alison Crosbie
+Million Dollar Baby (2004), Drama,Sport - Clint Eastwood; Hilary Swank,Clint Eastwood,Morgan Freeman
+Ben-Hur (1959), Adventure,Drama,History - William Wyler; Charlton Heston,Jack Hawkins,Stephen Boyd
+The Grapes of Wrath (1940), Drama - John Ford; Henry Fonda,Jane Darwell,John Carradine
+Hachi: A Dog's Tale (2009), Drama,Family - Lasse Hallström; Richard Gere,Joan Allen,Cary-Hiroyuki Tagawa
+Diabolique (1955), Drama,Horror,Thriller - Henri-Georges Clouzot; Simone Signoret,Véra Clouzot,Paul Meurisse
+Sin City (2005), Crime,Thriller - Frank Miller; Mickey Rourke,Clive Owen,Bruce Willis
+Stalker (1979), Drama,Sci-Fi - Andrei Tarkovsky; Alisa Freyndlikh,Aleksandr Kaydanovskiy,Anatoliy Solonitsyn
+The Best Years of Our Lives (1946), Drama,Romance,War - William Wyler; Fredric March,Dana Andrews,Myrna Loy
+Gandhi (1982), Biography,Drama,History - Richard Attenborough; Ben Kingsley,John Gielgud,Candice Bergen
+Donnie Darko (2001), Drama,Sci-Fi - Richard Kelly; Jake Gyllenhaal,Jena Malone,Mary McDonnell
+8½ (1963), Drama - Federico Fellini; Marcello Mastroianni,Anouk Aimée,Claudia Cardinale
+Strangers on a Train (1951), Crime,Film-Noir,Thriller - Alfred Hitchcock; Farley Granger,Robert Walker,Ruth Roman
+Wild Tales (2014), Comedy,Drama,Thriller - Damián Szifrón; Darío Grandinetti,María Marull,Mónica Villa
+Before Sunrise (1995), Drama,Romance - Richard Linklater; Ethan Hawke,Julie Delpy,Andrea Eckert
+The Battle of Algiers (1966), Drama,History,War - Gillo Pontecorvo; Brahim Hadjadj,Jean Martin,Yacef Saadi
+Infernal Affairs (2002), Crime,Mystery,Thriller - Wai-Keung Lau; Andy Lau,Tony Chiu Wai Leung,Anthony Chau-Sang Wong
+Jaws (1975), Adventure,Drama,Thriller - Steven Spielberg; Roy Scheider,Robert Shaw,Richard Dreyfuss
+Throne of Blood (1957), Action,Drama - Akira Kurosawa; Toshirô Mifune,Minoru Chiaki,Isuzu Yamada
+Memories of Murder (2003), Crime,Drama,Mystery - Joon-ho Bong; Kang-ho Song,Sang-kyung Kim,Roe-ha Kim
+Fanny and Alexander (1982), Drama - Ingmar Bergman; Bertil Guve,Pernilla Allwin,Kristina Adolphson
+Harry Potter and the Deathly Hallows: Part 2 (2011), Adventure,Drama,Fantasy - David Yates; Daniel Radcliffe,Emma Watson,Rupert Grint
+Rocky (1976), Drama,Sport - John G. Avildsen; Sylvester Stallone,Talia Shire,Burt Young
+Barry Lyndon (1975), Adventure,Drama,History - Stanley Kubrick; Ryan O'Neal,Marisa Berenson,Patrick Magee
+The Truman Show (1998), Drama - Peter Weir; Jim Carrey,Ed Harris,Laura Linney
+High Noon (1952), Drama,Thriller,Western - Fred Zinnemann; Gary Cooper,Grace Kelly,Thomas Mitchell
+Dog Day Afternoon (1975), Crime,Drama - Sidney Lumet; Al Pacino,John Cazale,Penelope Allen
+The King's Speech (2010), Biography,Drama,History - Tom Hooper; Colin Firth,Geoffrey Rush,Helena Bonham Carter
+The Imitation Game (2014), Biography,Drama,Thriller - Morten Tyldum; Benedict Cumberbatch,Keira Knightley,Matthew Goode
+Ip Man (2008), Action,Biography,Drama - Wilson Yip; Donnie Yen,Simon Yam,Siu-Wong Fan
+La Haine (1995), Crime,Drama - Mathieu Kassovitz; Vincent Cassel,Hubert Koundé,Saïd Taghmaoui
+A Fistful of Dollars (1964), Action,Drama,Western - Sergio Leone; Clint Eastwood,Gian Maria Volonté,Marianne Koch
+Notorious (1946), Drama,Film-Noir,Romance - Alfred Hitchcock; Cary Grant,Ingrid Bergman,Claude Rains
+Who's Afraid of Virginia Woolf? (1966), Drama,Romance - Mike Nichols; Elizabeth Taylor,Richard Burton,George Segal
+The Help (2011), Drama - Tate Taylor; Emma Stone,Viola Davis,Octavia Spencer
+Prisoners (2013), Crime,Drama,Mystery - Denis Villeneuve; Hugh Jackman,Jake Gyllenhaal,Viola Davis
+The Night of the Hunter (1955), Crime,Drama,Film-Noir - Charles Laughton; Robert Mitchum,Shelley Winters,Lillian Gish
+Spring, Summer, Fall, Winter... and Spring (2003), Drama - Ki-duk Kim; Ki-duk Kim,Yeong-su Oh,Jong-ho Kim
+La Strada (1954), Drama - Federico Fellini; Anthony Quinn,Giulietta Masina,Richard Basehart
+Underground (1995), Comedy,Drama,War - Emir Kusturica; Predrag Manojlovic,Lazar Ristovski,Mirjana Jokovic
+Papillon (1973), Biography,Crime,Drama - Franklin J. Schaffner; Steve McQueen,Dustin Hoffman,Victor Jory
+Before Sunset (2004), Drama,Romance - Richard Linklater; Ethan Hawke,Julie Delpy,Vernon Dobtcheff
+The Big Sleep (1946), Crime,Film-Noir,Mystery - Howard Hawks; Humphrey Bogart,Lauren Bacall,John Ridgely
+Departures (2008), Drama,Music - Yôjirô Takita; Masahiro Motoki,Ryôko Hirosue,Tsutomu Yamazaki
+The Killing (1956), Crime,Film-Noir,Thriller - Stanley Kubrick; Sterling Hayden,Coleen Gray,Vince Edwards
+Laura (1944), Crime,Drama,Film-Noir - Otto Preminger; Gene Tierney,Dana Andrews,Clifton Webb
+Anatomy of a Murder (1959), Crime,Drama,Mystery - Otto Preminger; James Stewart,Lee Remick,Ben Gazzara
+The Graduate (1967), Comedy,Drama,Romance - Mike Nichols; Dustin Hoffman,Anne Bancroft,Katharine Ross
+The Hustler (1961), Drama,Sport - Robert Rossen; Paul Newman,Jackie Gleason,Piper Laurie
+Elite Squad: The Enemy Within (2010), Action,Crime,Drama - José Padilha; Wagner Moura,Irandhir Santos,André Ramiro
