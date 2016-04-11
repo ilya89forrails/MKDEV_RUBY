@@ -32,6 +32,6 @@ module
   end
 
   def parse
-   puts all_movies.to_json
+    puts all_movies.to_json
   end
 end

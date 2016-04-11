@@ -2,8 +2,8 @@ require_relative 'my_movies_list.rb'
 require_relative 'movie.rb'
 
 
-filename = "movies.json"
-imdb_250 = MyMoviesList.from_json(filename) 
+filename = "movies.txt"
+imdb_250 = MyMoviesList.from_csv(filename) 
 
 #probalist = MoviesList.new(filename) 
 
