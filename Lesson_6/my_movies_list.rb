@@ -13,15 +13,8 @@ class MyMoviesList < MoviesList
 
   include Recommendations
 
-  def initialize(filename)
-    case 
-    when filename.include?('.json')
-      @movies = JSON.parse(File.read(filename), symbolize_names: true) 
-    when filename.include?('.txt')
-      @movies = CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS)
-    end
-    
-    @movies = @movies.collect{|line| OpenStruct.new(line.to_h)}.
+  def initialize(hash)
+    @movies = hash.collect{|line| OpenStruct.new(line.to_h)}.
       collect{|film| Movie.new_specific(film, self)}
   end
 

@@ -12,23 +12,21 @@ MOVIE_KEYS = [:link, :title, :year, :country, :release_date, :genre, :length, :r
 class MoviesList
 
 
-  def initialize(filename)
-    case 
-    when filename.include?('.json')
-      @movies = JSON.parse(File.read(filename), symbolize_names: true) 
-    when filename.include?('.txt')
-      @movies = CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS)
-    end
-    
-    @movies = @movies.collect{|line| OpenStruct.new(line.to_h)}.
+  def initialize(hash)
+    @movies = hash.collect{|line| OpenStruct.new(line.to_h)}.
       collect{|film| Movie.new(film, self)}
   end
 
- 
+  def self.from_json(filename)
+    initialize(JSON.parse(File.read(filename), symbolize_names: true))
+  end
 
-  @@sort, @@filter = {}, {}
-   
 
+  def self.from_csv(filename)
+    initialize(CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS))
+  end
+
+@@sort, @@filter = {}, {}
 
   def longest (number) 
      @movies.sort_by(&:length).reverse.first(number).
