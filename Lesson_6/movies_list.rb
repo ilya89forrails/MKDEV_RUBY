@@ -13,9 +13,14 @@ class MoviesList
 
 
   def initialize(filename)
+    case 
+    when filename.include?('.json')
+      @movies = JSON.parse(File.read(filename), symbolize_names: true) 
+    when filename.include?('.txt')
+      @movies = CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS)
+    end
     
-    @movies = JSON.parse(File.read(filename), symbolize_names: true).
-      collect{|line| OpenStruct.new(line.to_h)}.
+    @movies = @movies.collect{|line| OpenStruct.new(line.to_h)}.
       collect{|film| Movie.new(film, self)}
   end
 

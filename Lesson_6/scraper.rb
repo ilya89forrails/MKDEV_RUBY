@@ -9,7 +9,7 @@ def one_movie(uri)
   connection = Nokogiri::HTML(open(uri))
 
   one_movie = {
-    title: connection.css("[class='originalTitle']").text.chomp(" (original title)"),
+    title: connection.css("[class='title_wrapper']").css("[itemprop='name']").text.split("(").first.chop,
     year: connection.css("span[id='titleYear']").text.chop[1..4],
     country: connection.css("a[href='/country/us?ref_=tt_dt_dt']").text,
     release_date: connection.css("meta[itemprop='datePublished']").collect{|m| m['content']}.first,
@@ -18,7 +18,7 @@ def one_movie(uri)
     rating: connection.css("span[itemprop='ratingValue']").text,
     editor: connection.css("span[itemprop='director']").css("span[itemprop='name']").text,
     actors: connection.css("span[itemprop='actors']").text.split(",").collect(&:strip).join(",")
-    }.to_json
+    }
 end
 
 
@@ -31,11 +31,11 @@ def all_movies
   hrefs = connection.css("td[class='titleColumn'] a[href]").
           collect{|m| m.to_s.split('/?').first.split('/').last}
   full_routes = hrefs.collect{|link| base_href.to_s + link.to_s}
-  
-  result = full_routes[0..4].collect{|link| one_movie (link)}
+
+  result = full_routes.collect{|link| one_movie (link)}
 end
 
 
 
- puts all_movies
+ puts all_movies.to_json
 
