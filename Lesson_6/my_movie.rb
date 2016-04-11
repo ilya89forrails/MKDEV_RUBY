@@ -2,41 +2,28 @@
 require_relative 'movie.rb'
 
 class AncientMovie < Movie
-  
-  MY_PREFERENCE = 0.2
-  
-  def describe
-    "#{@title} — старый фильм (#{@year} год)"
-  end
+  filter {(1900..1945).cover?(year)}
+  print_format "%{title} — старый фильм (%{year} год)"
+  weight 0.2
 end
 
 
 class ClassicMovie < Movie
-
-  MY_PREFERENCE = 0.4
-
-  def describe
-    #x = @m_list.select{|movie| movie.editor == @editor}.count.to_s
-   "#{@title} — классический фильм, режиссёр #{@editor}, (ещё "  + (@m_list.count_by_editor(@editor)-1).to_s + " его фильмов в списке)"
-  end
+  filter {(1946..1968).cover?(year)}
+  print_format "%{title} — классический фильм, режиссёр %{editor}" # (ещё %{count_by_editor} его фильмов в списке)"
+  weight 0.4
 end
 
 
 class ModernMovie < Movie
-
-  MY_PREFERENCE = 0.2
-
-  def describe
-    "#{@title} — современное кино: играют #{@actors}"
-  end
+  filter {(1969..1999).cover?(year)}
+  print_format "%{title} — современное кино: играют %{actors}"
+  weight 0.2
 end
 
 
 class NewMovie < Movie
-
-  MY_PREFERENCE = 0.2
-
-  def describe
-    "#{@title} — новинка, большие сборы!"
-  end
+  filter {(2000..2016).cover?(year)}
+  print_format "%{title} — новинка, большие сборы!"
+  weight 0.2
 end

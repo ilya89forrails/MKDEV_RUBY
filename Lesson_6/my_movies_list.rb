@@ -1,7 +1,7 @@
 require 'csv'
 require 'date'
 require 'ostruct'
-
+require 'json'
 
 require_relative 'movies_list.rb'
 require_relative 'my_movie.rb'
@@ -15,25 +15,19 @@ class MyMoviesList < MoviesList
 
   def initialize(filename)
     
-    @movies = CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS).
+    @movies = JSON.parse(File.read(filename), symbolize_names: true).
       collect{|line| OpenStruct.new(line.to_h)}.
-      collect{|film| 
-      case film.year.to_i
-        when  1900..1945
-          AncientMovie.new(film, self)
-        when 1945..1969
-          ClassicMovie.new(film, self)
-        when 1968..1999
-          ModernMovie.new(film, self)
-        else
-          NewMovie.new(film, self)  
-      end}
+      collect{|film| Movie.new_specific(film, self)}
   end
 
   def type_by_name (title)
     @movies.select{|m|m.title=="#{title}"}.collect{|m| m.class}.to_s
   end
 
+
+  def get_first
+    @movies.first
+  end
 
 end
 
