@@ -1,14 +1,13 @@
 require_relative 'my_movies_list.rb'
 require_relative 'movie.rb'
+require_relative 'scraper.rb'
 
+#filename = "movies.json"
+#imdb_250 = MyMoviesList.from_json(filename) 
 
+Scraper.all_movies
 
-
-
-filename = "movies.json"
-imdb_250 = MyMoviesList.from_json(filename) 
-
-imdb_250.scrape_imdb
+#Scraper.scrape_imdb
 
 #probalist = MoviesList.new(filename) 
 
@@ -61,10 +60,10 @@ imdb_250.scrape_imdb
 
 #imdb_250.not_seen(5).reject(&:comedy?)
 
-film = imdb_250.get_first
+#film = imdb_250.get_first
 
 #puts imdb_250.genres_list
 
-puts film.comedy?
-puts film.drama?
-puts film.borsch?
+#puts film.comedy?
+#puts film.drama?
+#puts film.borsch?

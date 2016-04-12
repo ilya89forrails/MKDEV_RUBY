@@ -4,10 +4,17 @@ require "json"
 
 module Scraper
 
-  def one_movie(uri)
+  module_function
 
+  def scrape_imdb
+    puts all_movies.to_json
+  end
+
+
+  private
+
+  module_function def one_movie(uri)
     connection = Nokogiri::HTML(open(uri))
-
     one_movie = {
       title: connection.css("[class='title_wrapper']").css("[itemprop='name']").text.split("(").first.chop,
       year: connection.css("span[id='titleYear']").text.chop[1..4],
@@ -21,7 +28,7 @@ module Scraper
       }
   end
 
-  def all_movies
+  module_function def all_movies
     base_href = URI('http://www.imdb.com/title/')
     connection = Nokogiri::HTML(open('http://www.imdb.com/chart/top'))
     hrefs = connection.css("td[class='titleColumn'] a[href]").
@@ -30,8 +37,5 @@ module Scraper
 
     result = full_routes.collect{|link| one_movie (link)}
   end
-
-  def scrape_imdb
-    puts all_movies.to_json
-  end
+  
 end

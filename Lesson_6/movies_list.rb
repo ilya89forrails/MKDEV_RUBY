@@ -1,6 +1,7 @@
 require 'csv'
 require 'date'
 require 'ostruct'
+require 'json'
 
 require_relative 'movie.rb'
 
