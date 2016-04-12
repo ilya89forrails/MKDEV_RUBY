@@ -2,7 +2,7 @@ require "open-uri"
 require "nokogiri"
 require "json"
 
-module 
+module Scraper
 
   def one_movie(uri)
 
@@ -31,7 +31,7 @@ module
     result = full_routes.collect{|link| one_movie (link)}
   end
 
-  def parse
+  def scrape_imdb
     puts all_movies.to_json
   end
 end

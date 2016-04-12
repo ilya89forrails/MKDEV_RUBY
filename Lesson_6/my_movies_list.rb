@@ -7,10 +7,11 @@ require_relative 'movies_list.rb'
 require_relative 'my_movie.rb'
 require_relative 'ratings.rb'
 require_relative 'seen_movies_list.rb'
-
+require_relative 'scraper.rb'
 
 class MyMoviesList < MoviesList
-
+  
+  include Scraper
   include Recommendations
 
   def initialize(hash)
