@@ -1,7 +1,7 @@
 require 'csv'
 require 'date'
 require 'ostruct'
-require 'json'
+
 
 require_relative 'movies_list.rb'
 require_relative 'my_movie.rb'
@@ -14,7 +14,9 @@ class MyMoviesList < MoviesList
   include Recommendations
 
   def initialize(hash)
-    @movies = hash.collect{|line| OpenStruct.new(line.to_h)}.
+    
+    @movies = hash.
+      collect{|line| OpenStruct.new(line.to_h)}.
       collect{|film| Movie.new_specific(film, self)}
   end
 

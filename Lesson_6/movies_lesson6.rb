@@ -35,7 +35,7 @@ imdb_250 = MyMoviesList.from_csv(filename)
 #puts imdb_250.already_seen(5)
 
 #
-puts imdb_250.print
+#puts imdb_250.print
 
 #puts imdb_250.sort_by{ |movie| [movie.genre, movie.year] }
 

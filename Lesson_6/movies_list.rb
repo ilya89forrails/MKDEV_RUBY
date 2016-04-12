@@ -1,7 +1,6 @@
 require 'csv'
 require 'date'
 require 'ostruct'
-require 'json'
 
 require_relative 'movie.rb'
 
@@ -11,21 +10,24 @@ MOVIE_KEYS = [:link, :title, :year, :country, :release_date, :genre, :length, :r
 
 class MoviesList
 
-@@sort, @@filter = {}, {}
-
 
   def initialize(hash)
-    @movies = hash.collect{|line| OpenStruct.new(line.to_h)}.
+    
+    @movies = hash.
+      collect{|line| OpenStruct.new(line.to_h)}.
       collect{|film| Movie.new(film, self)}
   end
 
 
-  def self.from_json(filename)
+  @@sort, @@filter = {}, {}
+   
+
+  def self.from_json (filename)
     new(JSON.parse(File.read(filename), symbolize_names: true))
   end
 
 
-  def self.from_csv(filename)
+  def self.from_csv (filename)
     new(CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS))
   end
 

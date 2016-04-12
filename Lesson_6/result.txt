@@ -1,2 +1,2 @@
-The Shawshank Redemption — современное кино: играют Tim Robbins,Morgan Freeman,Bob Gunton
-The Godfather — современное кино: играют Marlon Brando,Al Pacino,James Caan
+false
+true
