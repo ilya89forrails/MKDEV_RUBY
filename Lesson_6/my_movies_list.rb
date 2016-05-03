@@ -10,30 +10,25 @@ require_relative 'seen_movies_list.rb'
 
 
 class MyMoviesList < MoviesList
+  
 
   include Recommendations
 
-  def initialize(filename)
+  def initialize(hash)
     
-    @movies = CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS).
+    @movies = hash.
       collect{|line| OpenStruct.new(line.to_h)}.
-      collect{|film| 
-      case film.year.to_i
-        when  1900..1945
-          AncientMovie.new(film, self)
-        when 1945..1969
-          ClassicMovie.new(film, self)
-        when 1968..1999
-          ModernMovie.new(film, self)
-        else
-          NewMovie.new(film, self)  
-      end}
+      collect{|film| Movie.new_specific(film, self)}
   end
 
   def type_by_name (title)
     @movies.select{|m|m.title=="#{title}"}.collect{|m| m.class}.to_s
   end
 
+
+  def get_first
+    @movies.first
+  end
 
 end
 

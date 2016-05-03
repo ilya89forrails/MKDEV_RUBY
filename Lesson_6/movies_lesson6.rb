@@ -1,9 +1,19 @@
 require_relative 'my_movies_list.rb'
+require_relative 'movie.rb'
+require_relative 'scraper.rb'
 
+#filename = "movies.json"
+#imdb_250 = MyMoviesList.from_json(filename) 
 
+Scraper.all_movies
 
-filename = "movies.txt"
-imdb_250 = MyMoviesList.new(filename) 
+#Scraper.scrape_imdb
+
+#probalist = MoviesList.new(filename) 
+
+#puts probalist.print
+
+#proba = Movie.new
 
 #imdb_250.watched("12 Angry Men", 10)
 #imdb_250.watched("Goodfellas", 9)
@@ -17,6 +27,10 @@ imdb_250 = MyMoviesList.new(filename)
 
 
 #puts "Рекомендуемые фильмы из непросмотренных:"
+
+#puts imdb_250.movies
+
+
 #puts imdb_250.not_seen(5)
 
 
@@ -25,7 +39,7 @@ imdb_250 = MyMoviesList.new(filename)
 #puts imdb_250.already_seen(5)
 
 #
-#puts imdb_250.print{ |movie| "#{movie.year}: #{movie.title}" }
+#puts imdb_250.print
 
 #puts imdb_250.sort_by{ |movie| [movie.genre, movie.year] }
 
@@ -35,12 +49,21 @@ imdb_250 = MyMoviesList.new(filename)
 
 #puts imdb_250.sort_by("country") # сортировка по заданному полю
 
-imdb_250.add_filter(:genres){|movie, *genres| movie.has_genre?(genres)}
-imdb_250.add_filter(:years){|movie, from, to| (from..to).include?(movie.year.to_i)}
+#imdb_250.add_filter(:genres){|movie, *genres| movie.has_genre?(genres)}
+#imdb_250.add_filter(:years){|movie, from, to| (from..to).include?(movie.year.to_i)}
 
-puts imdb_250.filter(
-    genres: ['Drama', 'Crime'],
-    years: [2000, 2010]
-  )
+#puts imdb_250.filter(
+ #   genres: ['Drama', 'Crime'],
+#    years: [2000, 2010]
+ # )
 
 
+#imdb_250.not_seen(5).reject(&:comedy?)
+
+#film = imdb_250.get_first
+
+#puts imdb_250.genres_list
+
+#puts film.comedy?
+#puts film.drama?
+#puts film.borsch?

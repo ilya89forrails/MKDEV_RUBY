@@ -1,6 +1,7 @@
 require 'csv'
 require 'date'
 require 'ostruct'
+require 'json'
 
 require_relative 'movie.rb'
 
@@ -11,17 +12,25 @@ MOVIE_KEYS = [:link, :title, :year, :country, :release_date, :genre, :length, :r
 class MoviesList
 
 
-  def initialize(filename)
+  def initialize(hash)
     
-    @movies = CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS).
+    @movies = hash.
       collect{|line| OpenStruct.new(line.to_h)}.
-      collect{|film| Movie.new(film)}
-
+      collect{|film| Movie.new(film, self)}
   end
 
 
   @@sort, @@filter = {}, {}
    
+
+  def self.from_json (filename)
+    new(JSON.parse(File.read(filename), symbolize_names: true))
+  end
+
+
+  def self.from_csv (filename)
+    new(CSV.read(filename, col_sep: '|', headers: MOVIE_KEYS))
+  end
 
 
   def longest (number) 
@@ -132,13 +141,15 @@ class MoviesList
       @movies.sort_by(&var)
     when field2
       @movies.sort_by(&field2)
+    else 
+      "Can't sort"
     end
   end
 
 
   def filter (args)
 
-  #  @movies.each{|m| m.show(["Drama", "Crime"])}
+   # @movies.each{|m| m.show("Drama")}
 
   # puts  @movies.select{|movie|  movie.has_genre?(["Drama", "Crime"])}
 
@@ -147,7 +158,10 @@ class MoviesList
   end
 
 
-  
+  def genres_list
+   result ||= []
+   result = @movies.collect(&:genre).flatten.uniq
+  end
 
 
 end

@@ -7,8 +7,8 @@ module Recommendations
     
     seen_movs = SeenMoviesList.instance
     @movies.reject{|m| seen_movs.watched?(m.title)}.
-      sort_by { |movie| movie.class::MY_PREFERENCE * ((movie.rating.to_f)-8.0) * rand }.
-      reverse.first(number).collect{|m| m.describe}
+      sort_by { |movie| movie.class.my_weight * ((movie.rating.to_f)-8.0) * rand }.
+      reverse.first(number).collect(&:to_s)
   end
 
 
@@ -17,9 +17,9 @@ module Recommendations
 
     seen_movs = SeenMoviesList.instance
     @movies.select{|m| seen_movs.watched?(m.title)}.
-      sort_by { |movie| movie.class::MY_PREFERENCE * rand * (seen_movs.my_rate_for(movie.title).to_s.to_f)}.
+      sort_by { |movie| movie.class.my_weight * rand * (seen_movs.my_rate_for(movie.title).to_s.to_f)}.
       first(number).sort_by{|movie| seen_movs.when_seen(movie.title)}.
-      collect{|m| m.describe}
+      collect(&:to_s)
   end
 
 end
